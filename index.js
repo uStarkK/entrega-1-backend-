@@ -10,7 +10,9 @@ class ProductManager {
             return "Papito el producto que querés agregar ya se encuentra cargado, o hay uno con el mismo código"
         }
 
-        if (product.title && product.desc && product.price && product.thumbnail && product.code && product.stock) {
+        const requiredField = ['title', 'desc', 'price', 'thumbnail', 'code', 'stock']
+        const hasAllFields = requiredField.every(prop => product[prop]);
+        if (hasAllFields) {
             product.id = this.id
             this.id++
             this.products.push(product)
