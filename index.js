@@ -16,7 +16,6 @@ class ProductManager {
             product.id = this.id
             this.id++
             this.products.push(product)
-            console.log(product)
             return "Producto cargado pa ;)"
         } else {
             return "Pa te faltan campos por llenar"
@@ -57,9 +56,21 @@ let product2 = {
     stock: 992
 }
 
+let product3 = {
+    price: 152,
+    desc: "No tengo nombre :(",
+    thumbnail: "thumbnail.com",
+    code: "a122",
+    stock: 992
+}
+
 console.log(productManager.addProduct(product1))
 
 console.log(productManager.addProduct(product2))
+
+console.log(productManager.addProduct(product3))
+
+console.log(productManager.getProducts())
 
 
 console.log(productManager.getProductById(1))
