@@ -29,7 +29,7 @@ class ProductManager {
     getProductById(id) {
         let findProduct = this.products.find(ele => ele.id === id)
         if(!findProduct){
-            return "No hay ningun producto con esa id"
+            return "No se ha encontrado ningun producto con la id especificada" 
         }
         return findProduct
         }
@@ -64,14 +64,16 @@ let product3 = {
     stock: 992
 }
 
+console.log(productManager.getProducts())
+
+
 console.log(productManager.addProduct(product1))
-
 console.log(productManager.addProduct(product2))
-
+console.log(productManager.addProduct(product2))
 console.log(productManager.addProduct(product3))
 
 console.log(productManager.getProducts())
 
 
-console.log(productManager.getProductById(1))
+console.log(productManager.getProductById(4))
 
